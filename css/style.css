@@ -6,8 +6,6 @@ body {
 /*A fonte Gilroy foi exportada */
 /*@font-face para poder utilizar as fontes exportadas*/
 
-
-
 @font-face {  /*Fonte especifica da NavBar*/
     font-family: 'Gilroy-Bold';
     src: url('Gilroy-Bold.ttf');
@@ -27,8 +25,6 @@ body {
     font-family: 'Gilroy-Thin';
     src: url('Gilroy-Thin.ttf');
 }
-
-
 
 /*programando a nav bar no geral*/
 .navbar {
@@ -60,8 +56,7 @@ body {
 }
 
 .navbar-links li {
-    margin: 0 20px;
-
+    margin: 0 15px;
 }
 
 .navbar-links a {
@@ -69,14 +64,11 @@ body {
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
-    font-family:'Gilroy-SemiBold'; /*ver como fazer isso*/
-    
-    
+    font-family:'Gilroy-SemiBold'; /*ver como fazer isso*/ 
 }
 
 .navbar-links a:hover {
     color: #ff8a46;
-
 }
 
 /*para nao deixar um sobre o outro*/
@@ -114,6 +106,97 @@ body {
     width:800px; /*definindo o tamanho*/
 }
 
+/* Responsividade telas um pouco menores - computador(laura) */
+@media (max-width: 1366px) {
+    .navbar-links {
+        margin-right: 0; /* Ajustar para telas menores */
+    }
+    
+    .navbar-fundo1 img {
+        height:800px; /* Ajustei o valor para um tamanho maior */
+        width: 1000px;  /* Ajustei o valor para um tamanho maior */
+        margin-top:-38px; /*37 fica um uma linha bem pequena (espaçamento)*/
+}
+
+.navbar-fundo1 .logocompleta {
+    position: absolute;
+    top: 55%; /*em relação ao topo*/
+    left: 50%;  /*porcentagem da esquerda - utilizar outros tipos*/
+    transform: translate(-50%, -50%);
+    height:500px; /*definindo o tamanho*/
+    width:500px; /*definindo o tamanho*/
+}
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar-links {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-icons {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .navbar-logo img {
+        margin-top: 10px;
+
+    }
+
+    .navbar-fundo1 img {
+        height:800px; /* Ajustei o valor para um tamanho maior */
+        width: 485px;  /* Ajustei o valor para um tamanho maior */
+        margin-top:-38px; /*37 fica um uma linha bem pequena (espaçamento)*/
+      
+}
+
+   .navbar-fundo1 .logocompleta {
+    position: absolute;
+    top: 55%; /*em relação ao topo*/
+    left: 50%;  /*porcentagem da esquerda - utilizar outros tipos*/
+    transform: translate(-50%, -50%);
+    height:500px; /*definindo o tamanho*/
+    width:400px; /*definindo o tamanho*/
+}
+}
+
+/* Aplicando responsividade para telas maiores - tela dos computadores da escola*/
+@media (min-width: 1920px) {
+    .navbar-links {
+        margin-right: 650px; /* Ajuste para maior espaçamento */
+    }
+
+    .navbar-icons {
+        margin-right: 75px; /* Ajuste para maior espaçamento */
+    }
+
+    .navbar-logo img {
+        height:500px; /*definindo o tamanho - deixando maior*/
+        width:900px; /*definindo o tamanho - deixando maior*/
+    }
+
+    .navbar-fundo1 img {
+        height:1250px; /* Ajustei o valor para um tamanho maior */
+        width: 1530px;  /* Ajustei o valor para um tamanho maior */
+        margin-top:-38px; /*37 fica um uma linha bem pequena (espaçamento)*/
+    }
+
+    .navbar-fundo1 .logocompleta {
+        position: absolute;
+        top: 55%; /*em relação ao topo*/
+        left: 50%;  /*porcentagem da esquerda - utilizar outros tipos*/
+        transform: translate(-50%, -50%);
+        height:400px; /*definindo o tamanho*/
+        width:800px; /*definindo o tamanho*/
+    }
+}
 
 /* Seção de Serviços, Nossos Objetivos e Segmentos*/
 
@@ -171,7 +254,6 @@ body {
 
  h1:hover{
     color: #ff8a46;
-    
 }
 
 .servico p, .objetivo p, .segmentos p {
@@ -184,8 +266,6 @@ body {
     text-align-last: justify;
     line-height: 1.7;
     hyphens: auto; /* Permite a quebra automática de palavras */
-    
-  
 }
 
 .linha4{
@@ -197,6 +277,36 @@ body {
     margin-left: 20px;
 }
 
+/* Responsividade para telas maiores que 1920px */
+@media (min-width: 1920px) {
+    .servico, .objetivo, .segmentos {
+        width: calc(30% - 30px); /* Ajusta a largura e o espaçamento */
+        margin: 0 15px 60px; /* Ajuste do espaçamento */
+    }
+}
+
+/* Responsividade para telas entre 1366px e 1920px */
+@media (max-width: 1920px) and (min-width: 1366px) {
+    .servico, .objetivo, .segmentos {
+        width: calc(30% - 20px); /* Ajusta a largura e o espaçamento */
+    }
+}
+
+/* Responsividade para telas menores que 1366px */
+@media (max-width: 1366px) {
+    .servico, .objetivo, .segmentos {
+        width: calc(45% - 20px); /* Ajusta a largura para telas menores */
+        margin: 0 10px 30px; /* Ajusta o espaçamento entre as divs */
+    }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .servico, .objetivo, .segmentos {
+        width: calc(90% - 20px); /* Ajusta a largura para telas muito pequenas */
+        margin: 0 0 30px; /* Ajusta o espaçamento entre as divs */
+    }
+}
 
 
 /* Começo do Saiba Mais*/
@@ -221,9 +331,6 @@ body {
     box-sizing: border-box;
     position: relative; /* Adiciona posição relativa para posicionar a imagem de fundo */
 }
-
-
-
 
 .background-image {
     background-size: cover;
@@ -380,6 +487,80 @@ h2:hover{
     margin-top: -50px;
 }
 
+/* Responsividade para telas menores que 1920px */
+@media (max-width: 1920px) {
+    .container h1 {
+        font-size: 30px; /* Ajusta o tamanho do título */
+        margin-left: 10px; /* Ajuste da posição horizontal */
+    }
+
+    .service1, .service2 {
+        width: 450px; /* Ajusta a largura do contêiner */
+        height: 500px; /* Ajusta a altura do contêiner */
+    }
+
+    .service1 img, .service2 img {
+        height: 300px; /* Ajusta a altura da imagem */
+        width: 500px; /* Ajusta a largura da imagem */
+    }
+}
+
+/* Responsividade para telas menores que 1366px */
+@media (max-width: 1366px) {
+    .container {
+        padding: 40px 2.5%; /* Ajusta o padding interno */
+        margin-left: 10px; /* Ajuste da posição horizontal */
+        margin-top: -20px; /* Ajusta a margem superior */
+    }
+
+    .container h1 {
+        font-size: 28px; /* Ajusta o tamanho do título */
+        margin-left: 5px; /* Ajuste da posição horizontal */
+    }
+
+    .services {
+        gap: 30px; /* Ajusta o espaçamento entre os contêineres */
+    }
+
+    .service1, .service2 {
+        width: 400px; /* Ajusta a largura do contêiner */
+        height: 450px; /* Ajusta a altura do contêiner */
+    }
+
+    .service1 img, .service2 img {
+        height: 250px; /* Ajusta a altura da imagem */
+        width: 400px; /* Ajusta a largura da imagem */
+    }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 5%; /* Ajusta o padding interno */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 0; /* Remove a margem superior */
+    }
+
+    .container h1 {
+        font-size: 24px; /* Ajusta o tamanho do título */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+
+    .services {
+        flex-direction: column; /* Organiza os serviços em coluna */
+        gap: 20px; /* Ajusta o espaçamento entre os contêineres */
+    }
+
+    .service1, .service2 {
+        width: 100%; /* Ajusta a largura do contêiner para ocupar toda a largura disponível */
+        height: auto; /* Ajusta a altura do contêiner */
+    }
+
+    .service1 img, .service2 img {
+        height: 200px; /* Ajusta a altura da imagem */
+        width: 100%; /* Ajusta a largura da imagem para ocupar toda a largura disponível */
+    }
+}
 
 /* Limita a largura máxima dos elementos com a classe .text para 300 pixels em telas com largura mínima de 500 pixels. */
 @media (min-width: 500px) {
@@ -388,9 +569,7 @@ h2:hover{
     }
 }
 
-
 /* começando a div sobre a empresa - somente texto*/
-
 
 @font-face {  /*Fonte especifica para os textos*/
     font-family: 'Gilroy-Medium';
@@ -456,7 +635,6 @@ h2:hover{
      hyphens: auto; /* Permite a quebra automática de palavras */
 }
 
-
 /*Parte do carrossel*/
 
 .img2 {
@@ -465,7 +643,6 @@ h2:hover{
     margin-top:120px; /*exatamente na medida da outra div*/
 }
 
-
 /*Importante - estilizando o carrossel ---------------------------------------------------------------------*/
 /* Container principal */
 .slides {
@@ -473,8 +650,6 @@ h2:hover{
     max-width: 1050px; /*espaçamento*/
     margin-top: -750px;
     margin-left:100px;
-    
-
 }
 
 /* Estilo do carrossel */
@@ -482,9 +657,7 @@ h2:hover{
     position: relative;
     width: 60%;
     display:flex;
-    overflow: hidden;
-    
-    
+    overflow: hidden; 
 }
 
 /* Estilo dos itens do carrossel */
@@ -499,7 +672,6 @@ h2:hover{
 .carousel-item.active {
     display: block; /* Mostrar o item ativo */
 }
-
 
 /* Estilo das imagens */
 .carousel-item img {
@@ -522,8 +694,6 @@ h2:hover{
     margin-top: -800;
 }
 
-
-
 /*Posibilidades de fonte+*/
 
 @font-face {  /*Fonte especifica para os textos*/
@@ -541,8 +711,6 @@ h2:hover{
     src: url('Gilroy-Medium.ttf');
 }
 
-
-
 /*Classe dos Nomes dos Funcionários*/ 
 
 .Nomefunc{
@@ -551,6 +719,7 @@ h2:hover{
 }
 
 /*Classe para os Cargos*/
+
 .Cargo{
     font-family: 'Gilroy-Medium';
     font-size: 20px;
@@ -565,7 +734,6 @@ h2:hover{
     margin-left:650px;
     cursor: pointer; /* Mudar o cursor para pointer */
     margin-top: 90px;
-
 }
  
 .equipe {
@@ -583,8 +751,7 @@ h2:hover{
     font-weight: bold;
     color: rgb(255, 255, 255);
     margin-left: 970px;
-    font-family: 'Gilroy-Bold';
-    
+    font-family: 'Gilroy-Bold';  
 }
 
 .quem{
@@ -596,10 +763,6 @@ h2:hover{
     font-family: 'Gilroy-Bold';   
 }
 
-
-
-
-
 /* Estilo das descrições */
 .description {
     color: #fff; /* Cor do texto */
@@ -608,10 +771,7 @@ h2:hover{
 
 
 /* Estilo do texto */
-
-
 /*fim do carrossel*/
-
 
 .linha1 {
     width: 90%;
@@ -622,9 +782,7 @@ h2:hover{
     margin-bottom: 20px;
 }
 
-
 /*Parte do forms*/
-
 
 .contatos-section {
     display: flex;
@@ -657,7 +815,6 @@ h2:hover{
     font-size:22px;
     text-align: center;
     margin-top:-5px;
-
 }
 
 .contatos-form form {
@@ -676,10 +833,7 @@ h2:hover{
     width:435px; /*alinhado */
     margin-left:70px; /*alinhado*/
     border-color: #ff8400;
-    box-shadow: 0 0 10px #ff850b;
-   
-
-    
+    box-shadow: 0 0 10px #ff850b; 
 }
 
 /*Formatando o campo nome*/
@@ -702,8 +856,6 @@ form input#phone {
     margin-left:315px;
     margin-top:-52px;
     font-family: 'Gilroy-Medium';
-    
-
 }
 
 /*Formatando o campo Email*/
@@ -753,9 +905,7 @@ form input#email {
 
 }
 
-
 /*parte do rodapé*/
-
 @font-face {  /*Fonte especifica para os textos*/
     font-family: 'Gilroy-Medium';
     src: url('Gilroy-Medium.ttf');
@@ -814,23 +964,19 @@ form input#email {
 }
 
 .sm{
- font-size:35px;
- margin-top:-100px;
- margin-left:15px;
- display: flex;
- font-family: 'Gilroy-SemiBold';
-
-
+    font-size:35px;
+    margin-top:-100px;
+    margin-left:15px;
+    display: flex;
+    font-family: 'Gilroy-SemiBold';
 }
 
 .text1{
-font-size:20px;
-margin-left:90px;
-display: flex; /*espaço entre os outro elementos*/
-padding-left:15%; /*espaço entre os outro elementos*/
-font-family:'Gilroy-Medium';
-
-
+    font-size:20px;
+    margin-left:90px;
+    display: flex; /*espaço entre os outro elementos*/
+    padding-left:15%; /*espaço entre os outro elementos*/
+    font-family:'Gilroy-Medium';
 }
 
 .text2{
@@ -840,7 +986,6 @@ font-family:'Gilroy-Medium';
     display: flex;
     padding-left:50%; /*espaço entre os outro elementos*/
     font-family:'Gilroy-Medium';
-
 }
 
 .text3{
@@ -850,7 +995,4 @@ font-family:'Gilroy-Medium';
     display: flex;
     padding-left:80%; /*espaço entre os outro elementos*/
     font-family:'Gilroy-Medium';
-
-    
 }
-
